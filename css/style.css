@@ -41,6 +41,42 @@ body {
 
 /* End Special Component */
 
+@media (max-width: 320)
+{
+    .header {
+        width: 100%;
+    }
+}
+
+@media  (max-width: 722px)
+{
+    .services .servce-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .welcom {
+        width: 447px;;
+    }
+    .feature {
+        width: 447px;
+    }
+}
+
+@media  (max-width: 496px)
+{
+    .services .servce-content .serv .image{
+        display: none;
+    }
+}
+
+@media (max-width: 513px) {
+    .feature .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 @media (max-width: 422px) {
     .spec-head {
         font-size: 80px;
@@ -240,6 +276,7 @@ body {
      flex-wrap: wrap;
      justify-content: space-between;
      padding: 60px 0;
+     width: 100%;
  }
 
  .feature .container .box {
