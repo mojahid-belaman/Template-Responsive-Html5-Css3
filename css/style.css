@@ -95,6 +95,8 @@ body {
     align-items: center;
 }
 
+
+
 .header .container .logo {
     width: 80px;
 }
@@ -208,7 +210,7 @@ body {
 @media (max-width: 768px)
 {
     .welcom {
-        width: 447px;
+        width: 100%;
     }
    .welcom .text {
         width: 50%;
@@ -288,9 +290,9 @@ body {
          flex-direction: column;
          align-items: center;
      }
-     .feature .container .box {
+     /* .feature .container .box {
         max-width: 50%;
-    }
+    } */
  }
 
  /* End Feature */
@@ -481,6 +483,11 @@ body {
     position: relative;
     width: 270px;
     height: 300px;
+    transition: 0.5s;
+}
+
+.about .about-content .image:hover {
+    transform: translate(20%);
 }
 
 @media (max-width: 991px) {
@@ -518,6 +525,7 @@ body {
 .about .about-content .image img {
     max-width: 100%;
     height: 100%;
+    border-radius: 5px;
 }
 
 @media (max-width: 991px) {
@@ -548,3 +556,79 @@ body {
     color: rgb(146, 137, 137);
 }
  /* End About */
+
+ /* Start Contact */
+
+.contact {
+    background-color: #e4e4e4;
+    padding: 50px 0;
+}
+
+.contact .info {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.contact .info h2 {
+    font-weight: 900;
+    font-size: 40px;
+    color: #2b4654;
+}
+
+@media (max-width: 768px)
+{
+    .contact .info h2 {
+        font-size: 20px;
+    }
+}
+
+.contact .info a {
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: none;
+    color: #10CAB7;
+}
+
+@media (max-width: 768px)
+{
+    .contact .info a {
+        font-size: 15px;
+    }
+}
+
+.contact .info .link {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact .info .link img {
+    margin: 0 10px;
+}
+.contact .info .link img:first-child {
+    margin-left: 30px;
+}
+
+ /* End Contact */
+
+ /* Start Footer */
+ 
+ .footer {
+     padding: 60px 0;
+     text-align: center;
+     background-color: #2b4654;
+     color: #FFF;
+ }
+
+@media (max-width: 768px)
+{
+    .footer {
+        font-size: 15px;
+    }
+}
+
+ .footer span {
+     color: #10CAB7;
+ }
+
+ /* End Footer */
