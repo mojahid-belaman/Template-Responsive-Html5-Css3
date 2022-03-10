@@ -41,41 +41,6 @@ body {
 
 /* End Special Component */
 
-@media (max-width: 320)
-{
-    .header {
-        width: 100%;
-    }
-}
-
-@media  (max-width: 722px)
-{
-    .services .servce-content {
-        flex-direction: column;
-        align-items: center;
-    }
-    .welcom {
-        width: 447px;;
-    }
-    .feature {
-        width: 447px;
-    }
-}
-
-@media  (max-width: 496px)
-{
-    .services .servce-content .serv .image{
-        display: none;
-    }
-}
-
-@media (max-width: 513px) {
-    .feature .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
 
 @media (max-width: 422px) {
     .spec-head {
@@ -229,7 +194,6 @@ body {
      background-size: cover;
      height: calc(100vh - 160px);
      position: relative;
-     /* width: calc(100vw - 10px); */
  }
 
  .welcom .text {
@@ -243,7 +207,10 @@ body {
 
 @media (max-width: 768px)
 {
-    .welcom .text {
+    .welcom {
+        width: 447px;
+    }
+   .welcom .text {
         width: 50%;
     }
 }
@@ -383,6 +350,11 @@ body {
 
  .services .servce-content .image {
      position: relative;
+     transition: 0.5s;
+ }
+
+ .services .servce-content .image:hover {
+     transform: translate(0%, 10%);
  }
 
  .services .servce-content .image img {
@@ -413,3 +385,166 @@ body {
      }
  }
  /* End Services */
+
+ /* Start Prtfolio */
+ 
+ .portfolio {
+     background-color: #e4e4e4;
+     padding: 50px 0;
+ }
+
+ .portfolio .portfolio-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.portfolio .portfolio-content .card {
+    width: 360px;
+    background-color: #FFF;
+    transition: 0.5s;
+}
+
+.portfolio .portfolio-content .card:hover:first-child {
+    transform: rotate(-10deg);
+}
+
+.portfolio .portfolio-content .card:hover:nth-child(2) {
+    transform: rotate(5deg);
+}
+
+.portfolio .portfolio-content .card:hover:last-child {
+    transform: rotate(10deg);
+}
+
+.portfolio .portfolio-content .card img {
+    width: 100%;
+}
+
+.portfolio .portfolio-content .info {
+    padding: 25px;
+}
+
+.portfolio .portfolio-content .card h3 {
+    margin-top: 0;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.portfolio .portfolio-content .card p {
+    color: #444;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px)
+{
+    .portfolio .portfolio-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .portfolio .portfolio-content .card {
+        width: 300px;
+    }
+}
+
+@media (max-width: 280px)
+{
+    .portfolio .portfolio-content .card {
+        width: 200px;
+    }
+}
+ /* End Prtfolio */
+
+ /* Start About */
+ 
+ .about {
+    padding: 50px 0;
+ }
+
+ .about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+@media (max-width: 991px) {
+    .about .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.about .about-content .image {
+    position: relative;
+    width: 270px;
+    height: 300px;
+}
+
+@media (max-width: 991px) {
+    .about .about-content .image::before,
+    .about .about-content .image::after {
+        display: none;
+    }
+}
+
+.about .about-content .image::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: calc(100% + 80px);
+    background-color: #E4E4E4;
+    top: -40px;
+    left: -20px;
+    z-index: -1;
+
+}
+
+.about .about-content .image::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 200px;
+    border-left: 60px solid #2C4755;
+    border-bottom: 60px solid #10CAB7;
+    top: -20px;
+    right: -20px;
+    z-index: -1;
+
+}
+
+.about .about-content .image img {
+    max-width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 991px) {
+    .about .about-content .image {
+        margin: 0 auto 50px;
+    }
+
+}
+
+.about .about-content .text {
+    flex-basis: calc(100% - 500px);
+}
+
+.about .about-content .text p:first-child {
+    font-weight: 700;
+    line-height: 1.7;
+    margin-bottom: 50px;
+}
+
+.about .about-content .text hr {
+    display: inline-block;
+    width: 50%;
+    border-color: var(--main-color);
+}
+
+.about .about-content .text p:last-child {
+    line-height: 1.7;
+    color: rgb(146, 137, 137);
+}
+ /* End About */
