@@ -2,6 +2,10 @@
     --main-color: #10CAB7
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
 }
