@@ -55,12 +55,6 @@ body {
 
 /* Small */
 
-@media (max-width: 516px) { 
-    .feature .container .box {
-        max-width: 220px;
-    }
- }
-
  @media (max-width: 636px) { 
     .feature .container .box {
         max-width: 250px;
@@ -88,7 +82,6 @@ body {
         width: 1170px;
     }
  }
-
 
  /* Start Header */
 .header {
@@ -155,6 +148,14 @@ body {
     display: none;
     z-index: 1;
 }
+
+@media (max-width: 768px)
+{
+    .header .container img {
+        width: 140px;
+    }
+}
+
 /* End Header */
 
 .header .container .link ul li {
@@ -192,6 +193,7 @@ body {
      background-size: cover;
      height: calc(100vh - 160px);
      position: relative;
+     /* width: calc(100vw - 10px); */
  }
 
  .welcom .text {
@@ -202,6 +204,13 @@ body {
     left: 50%;
     transform: translate(-50%);
  }
+
+@media (max-width: 768px)
+{
+    .welcom .text {
+        width: 50%;
+    }
+}
 
  .welcom .text h1 {
     color: var(--main-color);
@@ -269,6 +278,17 @@ body {
      color: #8F8F8F;
  }
 
+ @media (max-width: 768px)
+ {
+     .feature .container {
+         flex-direction: column;
+         align-items: center;
+     }
+     .feature .container .box {
+        max-width: 50%;
+    }
+ }
+
  /* End Feature */
 
  /* Start Services */
@@ -277,4 +297,82 @@ body {
      padding: 50px 0;
  }
 
+ .services .servce-content {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     margin-top: 80px;
+ }
+
+ .services .servce-content .col {
+     width: 300px;
+ }
+
+ .services .servce-content .serv {
+     display: flex;
+     margin-bottom: 30px;
+ }
+ 
+ @media (max-width: 768px) { 
+    .services .servce-content .serv {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .services .servce-content {
+        justify-content: center;
+    }
+ }
+
+ .services .servce-content .col .serv i {
+    color: var(--main-color);
+    font-size: 25px;
+    flex-basis: 60px;
+ }
+
+ .services .servce-content .serv .text-content {
+     flex: 1;
+ }
+
+ .services .servce-content .serv .text-content p {
+    color: #767676;
+    font-weight: 300;
+    line-height: 1.6;
+ }
+
+ .services .servce-content .serv .text-content h2 {
+    margin-top: 0;
+ }
+
+ .services .servce-content .image {
+     position: relative;
+ }
+
+ .services .servce-content .image img {
+     width: calc(100% - 10%);
+     height: 350px;
+     filter: grayscale(100%);
+     box-shadow: 1px 4px 10px #2b4654;
+ }
+
+ .services .servce-content .image::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 80px;
+    height: calc(100% + 100px);
+    background-color: #8B8B8B;
+    top: -50px;
+ }
+
+ @media (max-width: 1100px)
+ {
+     .image-column {
+         display: none;
+     }
+
+     .services .servce-content .col:last-child {
+         display: none;
+     }
+ }
  /* End Services */
